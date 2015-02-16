@@ -1,0 +1,18 @@
+{% block typeahead_widget %}
+{% spaceless %}
+    {% set main_id = id %}
+    {% set main_full_name = full_name %}
+    {{ block('hidden_widget') }}
+
+    {% set id = main_id ~ "_text" %}
+    {% set full_name = null %}
+    {%
+        set attr = attr|merge({
+            "data-typeahead": "1",
+            "data-url": url,
+            "data-limit": limit
+        })
+    %}
+    {{ block('form_widget_simple') }}
+{% endspaceless %}
+{% endblock %}
