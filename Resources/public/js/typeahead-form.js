@@ -29,50 +29,8 @@ $(function() {
             source: engine.ttAdapter()
         });
 
-    me.on("typeahead:selected", function(e, datum) {
-        realInput.val(datum.id);
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //if (undefined !== d.delay && d.delay != '') opts.delay = d.delay;
-        //if (undefined !== d.items && d.items != '') opts.items = d.items;
-        //if (undefined !== d.minlength && d.minlength != '') opts.minLength = d.minlength;
-        //if (undefined !== d.loadingiconurl && d.loadingiconurl != '') opts.loadingIconUrl = d.loadingiconurl;
-        //if (undefined !== d.resetonselect && d.resetonselect != '') opts.resetOnSelect = d.resetonselect ? true : false;
-        //if (undefined !== d.callback && d.callback != '') opts.callback = d.callback;
-
-        //// allow the defined callback to be a function string
-        //if (typeof opts.callback == 'string'
-        //    && opts.callback in window
-        //    && $.isFunction(window[opts.callback])) {
-        //    opts.callback = window[opts.callback];
-        //}
-
-        //me.typeahead(opts);
-        //$('#' + me.data('typeahead').$id.attr('id') + '_list').on({
-        //    'click.lifo-typeahead': function(e){
-        //        // @todo make this 'prettier' ... fade out, etc...
-        //        $(this).closest('li').remove();
-        //        e.preventDefault();
-        //        e.stopPropagation();
-        //    }
-        //}, 'a');
+        me.on("typeahead:selected", function(e, datum) {
+            realInput.val(datum.id);
+        });
     });
 });
