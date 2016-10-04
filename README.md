@@ -41,8 +41,8 @@ You need to pass the `$searchUrl` as a parameter.
 The response must be a JSON array in the following format:
 ```json
 [
-    { id: 1, value: 'Foo' },
-    { id: 2, value: 'Bar' }
+    { "id": 1, "value": "Foo" },
+    { "id": 2, "value": "Bar" }
 ]
 ```
 
